@@ -1,2 +1,48 @@
 ---
 # tasks file for suricata
+
+- name: Include distribution specific variables
+  include_vars: "{{ ansible_distribution }}.yml"
+  tags: suricata
+
+- include: CentOS.yml
+  when: ansible_distribution == "CentOS"
+  tags: suricata
+
+- include: Ubuntu.yml
+  when: ansible_distribution == "Ubuntu"
+  tags: suricata
+
+- name: Create classification configuration
+  template: >
+    src=classification.config.j2
+    dest=/etc/suricata/classification.config
+    owner=root
+    group=root
+    mode=0644
+  notify: restart suricata
+  tags: suricata
+
+- name: Create reference configuration
+  template: >
+    src=reference.config.j2
+    dest=/etc/suricata/reference.config
+    owner=root
+    group=root
+    mode=0644
+  notify: restart suricata
+  tags: suricata
+
+- name: Create suricata configuration
+  template: >
+    src=suricata.yaml.j2
+    dest=/etc/suricata/suricata.yaml
+    owner=root
+    group=root
+    mode=0644
+  notify: restart suricata
+  tags: suricata
+
+- name: Ensure suricata is started and enabled on boot
+  service: name={{ suricata_service_name }} state=started enabled=yes
+  tags: suricata

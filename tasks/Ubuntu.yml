@@ -1,0 +1,13 @@
+---
+# tasks file for suricata (Ubuntu specific)
+
+- name: Add suricata PPA
+  apt_repository: >
+    repo='ppa:oisf/suricata-stable'
+    state=present
+  tags: suricata
+
+- name: Install suricata packages
+  apt: name={{ item }} state=present update_cache=yes
+  with_items: suricata_packages
+  tags: suricata

@@ -1,2 +1,4 @@
 ---
 # vars file for suricata
+
+suricata_service_name: suricata

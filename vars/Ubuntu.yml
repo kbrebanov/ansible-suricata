@@ -1,0 +1,5 @@
+---
+# vars file for suricata (Ubuntu specific)
+
+suricata_packages:
+  - suricata={{ suricata_version }}*

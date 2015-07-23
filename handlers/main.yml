@@ -1,2 +1,6 @@
 ---
 # handlers file for suricata
+
+- name: restart suricata
+  service: name={{ suricata_service_name }} state=restarted
+  tags: suricata
