@@ -13,7 +13,7 @@ Role Variables
 
 | Name             | Default | Description                    |
 |------------------|---------|--------------------------------|
-| suricata_version | 2.0.8   | Version of suricata to install |
+| suricata_version | 2.0.9   | Version of suricata to install |
 
 Dependencies
 ------------
