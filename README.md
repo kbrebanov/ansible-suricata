@@ -1,6 +1,8 @@
 suricata
 ========
 
+[![Ansible Role](https://img.shields.io/ansible/role/5473.svg)](https://galaxy.ansible.com/list#/roles/5473)
+
 Installs suricata
 
 Requirements
