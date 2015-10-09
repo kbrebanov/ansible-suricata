@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: Kevin Brebanov
-  description: Installs and configures suricata
+  description: Installs suricata
   company:
   # If the issue tracker for your role is not on github, uncomment the
   # next line and provide a value

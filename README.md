@@ -1,7 +1,7 @@
 suricata
 ========
 
-Installs and configures suricata
+Installs suricata
 
 Requirements
 ------------
