@@ -1,7 +1,7 @@
 suricata
 ========
 
-[![Ansible Role](https://img.shields.io/ansible/role/5473.svg)](https://galaxy.ansible.com/list#/roles/5473)
+[![Build Status](https://travis-ci.org/kbrebanov/ansible-suricata.svg?branch=master)](https://travis-ci.org/kbrebanov/ansible-suricata)
 
 Installs suricata
 
